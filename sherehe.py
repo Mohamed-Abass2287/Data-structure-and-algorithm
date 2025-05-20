@@ -7,7 +7,7 @@ class Artist:
 		self.stage_name : str = stage_name
 		self.songs : List[str] = [songs] if isinstance(songs, str) else songs
 		self.is_on_stage : bool = False
-		self.booked_concerts : List["Concert"] = []
+		self.booked_concerts : List["Concert"] = [] # type: ignore
 
 	def call_on_stage(self) -> None:
 		if not self.is_on_stage: # If is_on_stage is False
